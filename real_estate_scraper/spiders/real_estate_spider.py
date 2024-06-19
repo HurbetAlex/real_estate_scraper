@@ -9,7 +9,6 @@ class RealEstateSpider(scrapy.Spider):
         'https://bostad.herbo.se'
     ]
 
-
     def parse(self, response):
         if 'kelm-immobilien' in response.url:
             yield from self.parse_kelm(response)
